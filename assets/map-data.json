@@ -1,0 +1,25 @@
+{
+  "buildings": [
+    {
+      "id": "b1",
+      "name": "Main Library",
+      "category": "Library",
+      "description": "The central library with study spaces and digital resources.",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "b2",
+      "name": "Science Hall",
+      "category": "Academic",
+      "description": "Faculty of Science and research labs.",
+      "coordinates": { "x": 300, "y": 200 }
+    },
+    {
+      "id": "b3",
+      "name": "Student Cafeteria",
+      "category": "Food",
+      "description": "Open from 8 AM to 8 PM with a variety of meals.",
+      "coordinates": { "x": 100, "y": 300 }
+    }
+  ]
+}

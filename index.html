@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Map PWA</title>
+
+  <!-- Shoelace CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/shoelace/shoelace.css"
+  />
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+
+  <meta name="theme-color" content="#0d6efd" />
+</head>
+<body>
+
+  <sl-layout>
+    <header slot="header" class="header">
+      <h1>University Campus Map</h1>
+    </header>
+
+    <section slot="base" class="main-content">
+      <sl-input
+        id="search-input"
+        placeholder="Search buildings, departments..."
+        clearable
+        autocomplete="off"
+        autofocus
+      ></sl-input>
+
+      <sl-select
+        id="filter-select"
+        placeholder="Filter by category"
+        clearable
+        multiple
+      >
+        <!-- Options dynamically loaded -->
+      </sl-select>
+
+      <div id="map" aria-label="Campus map" role="region" tabindex="0">
+        <!-- Map SVG or Canvas here -->
+        <p>Loading campus map...</p>
+      </div>
+
+      <sl-dialog label="Building Details" id="details-dialog">
+        <div id="details-content"></div>
+        <sl-button slot="footer" variant="primary" id="close-dialog-btn"
+          >Close</sl-button
+        >
+      </sl-dialog>
+    </section>
+  </sl-layout>
+
+  <!-- Shoelace JS -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/shoelace/shoelace.js"></script>
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>
