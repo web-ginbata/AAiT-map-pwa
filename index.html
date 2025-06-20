@@ -2,64 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Campus Map PWA</title>
-
-  <!-- Shoelace CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
-
-  />
-
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-
-  <meta name="theme-color" content="#0d6efd" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2E3A59" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>AAiT Campus Map</title>
 </head>
 <body>
+  <header>
+    <h1>AAiT Campus Map</h1>
+    <input type="search" id="location-search" placeholder="Search for a location..." />
+  </header>
 
-  <sl-layout>
-    <header slot="header" class="header">
-      <h1>University Campus Map</h1>
-    </header>
+  <main>
+    <div id="map-container">
+      <img src="./assets/images/aait_map.png" alt="Campus Map" id="campus-map" />
+      <div id="markers"></div>
+    </div>
+    <section id="location-info"></section>
+  </main>
 
-    <section slot="base" class="main-content">
-      <sl-input
-        id="search-input"
-        placeholder="Search buildings, departments..."
-        clearable
-        autocomplete="off"
-        autofocus
-      ></sl-input>
+  <footer>
+    <p>AAiT Campus Map PWA - Offline Ready</p>
+  </footer>
 
-      <sl-select
-        id="filter-select"
-        placeholder="Filter by category"
-        clearable
-        multiple
-      >
-        <!-- Options dynamically loaded -->
-      </sl-select>
-
-      <div id="map" aria-label="Campus map" role="region" tabindex="0">
-        <!-- Map SVG or Canvas here -->
-        <p>Loading campus map...</p>
-      </div>
-
-      <sl-dialog label="Building Details" id="details-dialog">
-        <div id="details-content"></div>
-        <sl-button slot="footer" variant="primary" id="close-dialog-btn"
-          >Close</sl-button
-        >
-      </sl-dialog>
-    </section>
-  </sl-layout>
-
-  <!-- Shoelace JS -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
-  
-  <script type="module" src="main.js"></script>
-
+  <script src="./js/app.js" type="module"></script>
 </body>
 </html>
