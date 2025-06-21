@@ -19,5 +19,4 @@ Host on GitHub Pages by pushing this repo to GitHub and enabling Pages from the 
 ---
 
 ## Credits
-- Shoelace components: https://shoelace.style
 - Campus data is fictional and stored in `assets/map-data.json`

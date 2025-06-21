@@ -31,7 +31,7 @@ async function fetchMapData() {
 function initFilters() {
   // Get unique categories
   const categories = Array.from(
-    new Set(mapData.buildings.map(b => b.category))
+    new Set(mapData.places.map(b => b.category))
   );
   categories.forEach(cat => {
     const option = document.createElement('sl-menu-item');
@@ -41,27 +41,27 @@ function initFilters() {
   });
 }
 
-function renderMap(filteredBuildings) {
-  const buildings = filteredBuildings || mapData.buildings;
+function renderMap(filteredPlaces) {
+  const places = filteredPlaces || mapData.places;
 
   // Simple map rendering (just coordinates shown as buttons)
   mapElement.innerHTML = ''; // Clear existing
 
-  if (!buildings.length) {
-    mapElement.innerHTML = '<p>No buildings found.</p>';
+  if (!places.length) {
+    mapElement.innerHTML = '<p>No places found.</p>';
     return;
   }
 
-  buildings.forEach(building => {
+  places.forEach(place => {
     const btn = document.createElement('sl-button');
     btn.variant = 'primary';
     btn.size = 'small';
     btn.style.position = 'absolute';
-    btn.style.left = building.coordinates.x + 'px';
-    btn.style.top = building.coordinates.y + 'px';
-    btn.textContent = building.name;
-    btn.title = building.description;
-    btn.addEventListener('click', () => showBuildingDetails(building));
+    btn.style.left = place.coordinates.x + 'px';
+    btn.style.top = place.coordinates.y + 'px';
+    btn.textContent = place.name;
+    btn.title = place.description;
+    btn.addEventListener('click', () => showBuildingDetails(place));
     mapElement.appendChild(btn);
   });
 
@@ -71,11 +71,11 @@ function renderMap(filteredBuildings) {
   mapElement.style.minHeight = '400px';
 }
 
-function showBuildingDetails(building) {
+function showPlaceDetails(place) {
   detailsContent.innerHTML = `
-    <h3>${building.name}</h3>
-    <p><strong>Category:</strong> ${building.category}</p>
-    <p>${building.description}</p>
+    <h3>${place.name}</h3>
+    <p><strong>Category:</strong> ${place.category}</p>
+    <p>${place.description}</p>
   `;
   detailsDialog.show();
 }
@@ -86,10 +86,10 @@ function filterAndSearch() {
     option => option.value
   );
 
-  const filtered = mapData.buildings.filter(building => {
+  const filtered = mapData.places.filter(place => {
     const matchesSearch =
-      building.name.toLowerCase().includes(searchTerm) ||
-      building.category.toLowerCase().includes(searchTerm);
+      place.name.toLowerCase().includes(searchTerm) ||
+      place.category.toLowerCase().includes(searchTerm);
     const matchesFilter =
       selectedFilters.length === 0 || selectedFilters.includes(building.category);
     return matchesSearch && matchesFilter;

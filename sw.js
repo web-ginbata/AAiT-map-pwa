@@ -5,11 +5,9 @@ const ASSETS_TO_CACHE = [
   'manifest.json',
   'style.css',
   'main.js',
-  'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/shoelace/shoelace.js',
-  'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/shoelace/shoelace.css',
   'assets/map-data.json',
-  'assets/icons/icon-192.png',
-  'assets/icons/icon-512.png'
+  'assets/icons/icon_192.png',
+  'assets/icons/icon_512.png'
 ];
 
 // Install event: cache files

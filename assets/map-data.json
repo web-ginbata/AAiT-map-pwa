@@ -1,24 +1,196 @@
 {
-  "buildings": [
+  "place": [
+    {
+      "id": "g1",
+      "name": "Main Gate",
+      "category": "gate",
+      "description": "Main gate infront of parking-lot where Staff, Vehicles, & Guests enter & leave",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "g2",
+      "name": "Secondary Gate",
+      "category": "gate",
+      "description": "Used by Students",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "s1",
+      "name": "Green Area 1",
+      "category": "green",
+      "description": "Located at the center of key Offices & has benches with tables",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "s2",
+      "name": "Green Area 2",
+      "category": "green",
+      "description": "Located in front of the Library",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "s3",
+      "name": "Soccer Field",
+      "category": "sport",
+      "description": "Soccer field with seats & metal goal posts",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "s4",
+      "name": "Basketball Court",
+      "category": "sport",
+      "description": "Concrete Basketball Court with two nets",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "s5",
+      "name": "Tennis Court",
+      "category": "sport",
+      "description": "Tennis Court",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "s6",
+      "name": "Parking lot",
+      "category": "service",
+      "description": "Car parking lot behind Admin Building",
+      "coordinates": { "x": 150, "y": 120 }
+    },
     {
       "id": "b1",
-      "name": "Main Library",
-      "category": "Library",
-      "description": "The central library with study spaces and digital resources.",
+      "name": "Main Building",
+      "category": "academic",
+      "description": "Housing the Four Schools of the institute",
       "coordinates": { "x": 150, "y": 120 }
     },
     {
       "id": "b2",
-      "name": "Science Hall",
-      "category": "Academic",
-      "description": "Faculty of Science and research labs.",
+      "name": "Samsung Building",
+      "category": "academic",
+      "description": "Housing Schools of the Software Engineering & Information Technology and other Offices",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "b3",
+      "name": "Library Building",
+      "category": "academic",
+      "description": "Housing the Main Library & Auditorium",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "b4",
+      "name": "NCR Building",
+      "category": "academic",
+      "description": "Housing Undergrad Registrar & Classrooms",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "b5",
+      "name": "Admin Building",
+      "category": "admin",
+      "description": "Housing administrative Offices(Finance, Dean offic, Graduate-regitrar,....)",
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r1",
+      "name": "Main Library",
+      "category": "academic",
+      "description": "The central library with study spaces and digital resources.",
+      "location":{"bldg": "b3","floor": 0, "room_num": 0}, 
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r2",
+      "name": "UG-Registrar",
+      "category": "admin",
+      "description": "Undergraduate registrar.",
+      "location":{"bldg": "b4","floor": 0, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r3",
+      "name": "PG-Registrar",
+      "category": "admin",
+      "description": "postgraduate registrar.",
+      "location":{"bldg": "b5","floor": 0, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r4",
+      "name": "AAiT Lounge",
+      "category": "food",
+      "description": "Open from 8 AM to 8 PM with a variety of meals for boath Students & Staff.",
+      "location":{"bldg": "b1","floor": 0, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r5",
+      "name": "Toilet 1",
+      "category": "service",
+      "description": "With modern ceramic Toiles , Sinks & mirros",
+      "location":{"bldg": "b1","floor": [0,1,2,3], "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r6",
+      "name": "School of Electrical and Computer Engineering",
+      "category": "academic",
+      "description": "SECE",
+      "location":{"bldg": "b1","floor": 1, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r7",
+      "name": "School of Chemical and Bio Engineering",
+      "category": "academic",
+      "description": "SCBE",
+      "location":{"bldg": "b1","floor": 1, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r8",
+      "name": "School of Civil and Environmental Engineering",
+      "category": "academic",
+      "description": "SCEE",
+      "location":{"bldg": "b1","floor": 1, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r9",
+      "name": "School of Mechanical and Industrial Engineering",
+      "category": "academic",
+      "description": "SMIE",
+      "location":{"bldg": "b1","floor": 1, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r10",
+      "name": "School of Multi-disciplinary Engineering",
+      "category": "academic",
+      "description": "SME",
+      "location":{"bldg": "b1","floor": 1, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "r11",
+      "name": "School Of Information Technology Engineering",
+      "category": "academic",
+      "description": "SITE",
+      "location":{"bldg": "b1","floor": 1, "room_num": 0},  
+      "coordinates": { "x": 150, "y": 120 }
+    },
+    {
+      "id": "b2",
+      "name": "AAiT Auditorium",
+      "category": "Conference Hall",
+      "description": "The largest Hall in AAiT with stage",
       "coordinates": { "x": 300, "y": 200 }
     },
     {
       "id": "b3",
-      "name": "Student Cafeteria",
+      "name": "AAiT Lounge",
       "category": "Food",
-      "description": "Open from 8 AM to 8 PM with a variety of meals.",
+      "description": "Open from 8 AM to 8 PM with a variety of meals for boath Students & Staff.",
       "coordinates": { "x": 100, "y": 300 }
     }
   ]
